@@ -2,6 +2,5 @@ numpy
 scipy
 matplotlib
 pandas
-pytest
-jupyterlab
 streamlit
+altair==4.2.2
