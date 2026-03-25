@@ -1,6 +1,0 @@
-numpy
-scipy
-matplotlib
-pandas
-streamlit
-altair==4.2.2
