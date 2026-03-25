@@ -1,22 +1,22 @@
 # Option Pricing App
 
-Hi, I'm Takeshi! I'm an incoming sophomore at Northwestern University studying Data Science and Mathematics. This project is my journey into quantitative finance. 
+A web application for pricing financial derivatives using quantitative models.
 
-Throughout this Summer (2025), taking advantage of many available free resources online, I've self-taught myself basic options theory, along with data visualization and analysis skills with Python (numpy, pandas, matplotlib, seaborn). Combining that with my prior knowledge of statistics & probability, during the final three weeks before my sophomore year begins, I’ll be putting my newfound skills to the test by building an interactive website app that implements three classic option pricing models. The models are as follows:
+## Models Implemented
 
-- Black-Scholes (European Options)
-- Binomial Tree (European & American Options)
-- Monte Carlo Simulation (European Options)
+* Black-Scholes Model
+* Binomial Option Pricing
 
-## Project Structure
-- `models/` —> pricing model implementations (`black_scholes.py`, `binomial.py`, `monte_carlo.py`)
-- `tests/` —> unit tests to verify correctness
-- `notebooks/` —> Jupyter notebooks for exploration and visualization
-- `app/` —> Streamlit app for interactivity
+## Features
 
-## Setup
-1. Create a virtual environment:
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate   # Mac/Linux
-   .\.venv\Scripts\Activate.ps1 # Windows PowerShell
+* Compute option prices based on user inputs
+* Compare model outputs
+* Backend implemented in Python
+
+## Purpose
+
+This project was built as part of my early exploration into quantitative finance and financial modeling.
+
+## Notes
+
+This project reflects foundational understanding of derivatives pricing and will be extended in the future with simulations and additional models.
