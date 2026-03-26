@@ -20,4 +20,4 @@ This project was built as part of my early exploration into quantitative finance
 
 ## App Link
 
-https://taks-simple-option-pricer.streamlit.app/Home
+https://qt-training-camp-tsr2vkasq72ytlmhaz3mrk.streamlit.app/Home
