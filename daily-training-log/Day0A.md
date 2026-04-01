@@ -1,4 +1,4 @@
-# Day 0 - March 25, 2026
+# Day 0A - March 25, 2026
 
 ## Training Goal
 Understand what I’m preparing for and set the foundation for the journey ahead
