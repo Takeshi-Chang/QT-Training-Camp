@@ -1,4 +1,4 @@
-# Day 1 – March 26, 2026
+# Day 0B – March 26, 2026
 
 ## Training Goal
 Dive into what it really means to be a Quant Trader at different types of firms
@@ -16,4 +16,4 @@ Dive into what it really means to be a Quant Trader at different types of firms
 - Unlike prop shops, where market makers earn profits from the bid-ask spread that they set and very high trading volume, hedge fund QTs try to predict price movements and make directional bets based on those predictions (so generally less frequent trades, and they don't act as market makers). Relies on mispricings within the market (where EV of an asset/stock deviates from the market value). Managing risk is really important to prevent bad outcomes from wiping away the profits (when the model is wrong).
 
 ## Reflection
-Sacrificed covering a lot of ground for really understanding what quants do at different firms. I'm definitely most interested in the HFTs/prop shops but I do want to keep my options open and continue learning about being a quant even at hedge funds, asset management firms, and banks. Going to keep diving in more about this tomorrow. Hopefully by the end of tomorrow I also have a list of firms that I find interesting and want to apply to within each class of firm. 
+Sacrificed covering a lot of ground for really understanding what quants do at different firms. I'm definitely most interested in the HFTs/prop shops but I do want to keep my options open and continue learning about being a quant even at hedge funds, asset management firms, and banks. 
