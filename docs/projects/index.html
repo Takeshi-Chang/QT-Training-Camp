@@ -1,1 +1,106 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Takeshi Chang</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2b;
+      --text: #e8edf7;
+      --muted: #a8b3c7;
+      --accent: #7aa2ff;
+      --border: #24314d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    h1, h2 {
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: 2.4rem; }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin-bottom: 14px;
+      font-size: 0.96rem;
+    }
+
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">← Back to home</a>
+
+    <h1>Projects</h1>
+    <p>
+      Applied work in modeling, statistics, and quantitative problem-solving.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>NBA Efficiency Modeling</h3>
+        <p>
+          Predicting true shooting percentage using shot profile, usage, and role-based metrics
+          with linear regression, polynomial features, Ridge regularization, and OLS inference.
+        </p>
+        <a href="./nba-efficiency-model/">View project</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
