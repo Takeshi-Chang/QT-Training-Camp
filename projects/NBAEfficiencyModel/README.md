@@ -1,9 +1,9 @@
 # NBA Efficiency Modeling: Predicting True Shooting Percentage
 
-NOTE: See report/nba_efficiency_report.html for more in-depth descriptions & analysis
+NOTE: This is simply an overview of the project. See report/nba_efficiency_report.html for more detail. 
 
 ## Overview
-This project builds a predictive model for NBA player efficiency (True Shooting Percentage) using shot profile, usage, and role-based statistics.
+This project builds a predictive model for NBA player efficiency (True Shooting Percentage) using shot profile, usage, and other metrics encapsulating on-court tendencies.
 
 The goal was to understand:
 - Which player tendencies most influence efficiency
@@ -15,7 +15,7 @@ The goal was to understand:
 ## Approach
 
 ### Feature Selection
-Here are a few of the carefully selected interpretable predictors:
+Here are a few of the carefully selected interpretable predictors (out of 9 total):
 - Free throw rate (`f_tr`)
 - 3-point attempt rate (`x3p_ar`)
 - Offensive rebounding (`orb_percent`)
@@ -91,6 +91,7 @@ Ridge was chosen intentionally:
 ---
 
 ## Tech Stack
+See notebooks/nba_efficiency_code.html for all the tools utilized & more detail.
 
 - Python (pandas, numpy)
 - scikit-learn 
