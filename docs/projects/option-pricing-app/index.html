@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Option Pricing App | Takeshi Chang</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2b;
+      --text: #e8edf7;
+      --muted: #a8b3c7;
+      --accent: #7aa2ff;
+      --border: #24314d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 34px;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .note, .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin: 18px 0 28px;
+    }
+
+    .note strong {
+      color: var(--text);
+    }
+
+    ul {
+      padding-left: 22px;
+      margin-top: 8px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    code {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1px 6px;
+      color: var(--text);
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">← Back to projects</a>
+
+    <h1>Option Pricing App</h1>
+
+    <div class="note">
+      <p>
+        <strong>Note:</strong> This page is a project overview. You can add links here later
+        to the deployed app, GitHub source code, and any writeup or screenshots.
+      </p>
+    </div>
+
+    <h2>Overview</h2>
+    <p>
+      This project is an interactive option pricing app built to explore how theoretical option
+      values change as inputs like stock price, strike price, volatility, time to expiration,
+      and the risk-free rate vary.
+    </p>
+
+    <h2>What It Does</h2>
+    <ul>
+      <li>Computes theoretical option prices using standard pricing logic</li>
+      <li>Lets users change key inputs and see how prices respond</li>
+      <li>Provides an applied way to build intuition for derivatives and volatility sensitivity</li>
+      <li>Turns abstract finance concepts into something visual and interactive</li>
+    </ul>
+
+    <h2>Why I Built It</h2>
+    <p>
+      I built this project to strengthen both my quantitative finance intuition and my ability
+      to turn mathematical ideas into usable tools. For quant trading, I think that bridge
+      between theory and implementation is really important.
+    </p>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Option prices are highly sensitive to volatility and time</li>
+      <li>Interactive tools are useful for developing intuition beyond formulas alone</li>
+      <li>Building even a simple pricing app requires careful handling of assumptions and inputs</li>
+    </ul>
+
+    <h2>Tech Stack</h2>
+    <ul>
+      <li>Python</li>
+      <li>Streamlit</li>
+      <li>Numerical / quantitative finance logic</li>
+    </ul>
+
+    <h2>Next Additions</h2>
+    <ul>
+      <li>Link to the live deployed app</li>
+      <li>Add screenshots or visuals from the interface</li>
+      <li>Include a short note on the pricing model used</li>
+    </ul>
+  </div>
+</body>
+</html>
