@@ -1,5 +1,5 @@
 # NBA Efficiency Modeling: Predicting True Shooting Percentage
-NOTE: This is simply an overview of the project. See index.html for the full report, and code.html for all the tools utilized and implementation of the code.
+NOTE: This is simply an overview of the project. See & download index.html for the full report, and code.html for all the tools utilized and implementation of the code.
 
 ## Overview
 This project builds a predictive model for NBA player efficiency (True Shooting Percentage) using shot profile, usage, and other metrics encapsulating on-court tendencies.
