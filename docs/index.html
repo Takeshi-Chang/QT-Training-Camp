@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Takeshi Chang | Portfolio</title>
+  <title>Takeshi Chang</title>
   <style>
     :root {
       --bg: #0b1020;
@@ -14,9 +14,7 @@
       --border: #24314d;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -37,9 +35,7 @@
       line-height: 1.2;
     }
 
-    h1 {
-      font-size: 2.8rem;
-    }
+    h1 { font-size: 2.8rem; }
 
     h2 {
       font-size: 1.4rem;
@@ -51,9 +47,7 @@
       color: var(--muted);
     }
 
-    .hero {
-      margin-bottom: 36px;
-    }
+    .hero { margin-bottom: 36px; }
 
     .hero p {
       max-width: 720px;
@@ -77,9 +71,7 @@
       background: var(--panel);
     }
 
-    .button:hover {
-      border-color: var(--accent);
-    }
+    .button:hover { border-color: var(--accent); }
 
     .grid {
       display: grid;
@@ -111,9 +103,7 @@
       font-weight: 600;
     }
 
-    .section-note {
-      font-size: 0.95rem;
-    }
+    .section-note { font-size: 0.95rem; }
 
     .footer {
       margin-top: 54px;
@@ -124,77 +114,79 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
+
+    <!-- HERO -->
     <section class="hero">
       <h1>Takeshi Chang</h1>
       <p>
-        I’m a Northwestern student interested in quantitative trading, probability, statistics,
-        and applied modeling. This site is a home for my projects, daily training log, and
-        ongoing technical preparation.
+        I’m a Northwestern student interested in quantitative trading, probability,
+        statistics, and applied modeling. This site is a home for my projects,
+        daily training log, and ongoing technical work.
       </p>
+
       <div class="links">
         <a class="button" href="https://github.com/Takeshi-Chang/QT-Training-Camp">GitHub Repo</a>
-        <a class="button" href="../daily-training-log/">Daily Training Log</a>
-        <a class="button" href="../projects/">Projects Folder</a>
-        <a class="button" href="../interview-prep/">Interview Prep</a>
+        <a class="button" href="./projects/">Projects</a>
+        <a class="button" href="./daily-training-log/">Training Log</a>
       </div>
     </section>
 
+    <!-- FEATURED PROJECT -->
     <section>
-      <h2>Featured Project</h2>
+      <h2>Featured Work</h2>
       <div class="grid">
         <div class="card">
           <h3>NBA Efficiency Modeling</h3>
           <p>
             Predicting true shooting percentage using shot profile, usage, and role-based
-            stats with linear regression, polynomial features, Ridge regularization, and OLS inference.
+            metrics with linear regression, polynomial features, and Ridge regularization.
           </p>
           <a href="./projects/nba-efficiency-model/">View project</a>
         </div>
       </div>
     </section>
 
+    <!-- EXPLORE -->
     <section>
       <h2>Explore</h2>
       <div class="grid">
-        <div class="card">
-          <h3>Daily Training Log</h3>
-          <p>
-            Day-by-day notes documenting what I’m studying, building, and improving.
-          </p>
-          <a href="./daily-training-log/">Open folder</a>
-        </div>
 
         <div class="card">
           <h3>Projects</h3>
           <p>
-            Applied builds and modeling projects that turn concepts into something tangible.
+            Applied builds and modeling projects focused on extracting signal from data.
           </p>
-          <a href="./projects/">Open folder</a>
+          <a href="./projects/">View projects</a>
         </div>
 
         <div class="card">
-          <h3>Interview Prep</h3>
+          <h3>Daily Training Log</h3>
           <p>
-            Notes, resources, and preparation work for recruiting and technical interviews.
+            A running log of what I’m learning, building, and improving each day.
           </p>
-          <a href="./interview-prep/">Open folder</a>
+          <a href="./daily-training-log/">View log</a>
         </div>
+
       </div>
     </section>
 
+    <!-- CURRENT FOCUS -->
     <section>
-      <h2>Current Focus</h2>
+      <h2>Currently Working On</h2>
       <p class="section-note">
-        Right now this repo is centered on building probability, statistics, modeling,
-        and research habits that translate into quant trading prep.
+        Building intuition in probability, stochastic processes, and statistical modeling,
+        while applying concepts through projects and consistent daily practice.
       </p>
     </section>
 
+    <!-- FOOTER -->
     <div class="footer">
-      Built from the QT-Training-Camp repository and updated over time.
+      Built and updated by Takeshi Chang.
     </div>
+
   </div>
 </body>
 </html>
