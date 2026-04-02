@@ -1,10 +1,311 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>NBA Efficiency Modeling</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBA Efficiency Modeling | Takeshi Chang</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2b;
+      --text: #e8edf7;
+      --muted: #a8b3c7;
+      --accent: #7aa2ff;
+      --border: #24314d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 34px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .note {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin: 18px 0 28px;
+    }
+
+    .note strong {
+      color: var(--text);
+    }
+
+    .section {
+      margin-top: 8px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin-top: 8px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    code {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1px 6px;
+      color: var(--text);
+      font-size: 0.95em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    th {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .subtle {
+      font-size: 0.96rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>NBA Efficiency Modeling</h1>
-  <p>Full project coming soon.</p>
+  <div class="container">
+    <a class="back" href="../">← Back to projects</a>
+
+    <h1>NBA Efficiency Modeling: Predicting True Shooting Percentage</h1>
+
+    <div class="note">
+      <p class="subtle">
+        <strong>Note:</strong> This is an overview of the project. See and download
+        <code>index.html</code> for the full report, and <code>code.html</code> for the
+        full implementation and tools used.
+      </p>
+    </div>
+
+    <section class="section">
+      <h2>Overview</h2>
+      <p>
+        This project builds a predictive model for NBA player efficiency (True Shooting Percentage)
+        using shot profile, usage, and other metrics encapsulating on-court tendencies.
+      </p>
+      <p>The goal was to understand:</p>
+      <ul>
+        <li>Which player tendencies most influence efficiency</li>
+        <li>Whether nonlinear relationships improve predictive performance</li>
+        <li>How much of shooting efficiency can realistically be explained using box-score features</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>Approach</h2>
+
+      <h3>Feature Selection</h3>
+      <p>Here are a few of the carefully selected interpretable predictors (out of 9 total):</p>
+      <ul>
+        <li>Free throw rate (<code>f_tr</code>)</li>
+        <li>3-point attempt rate (<code>x3p_ar</code>)</li>
+        <li>Offensive rebounding (<code>orb_percent</code>)</li>
+        <li>Assist rate (<code>ast_percent</code>)</li>
+      </ul>
+
+      <h3>Modeling Pipeline</h3>
+      <ul>
+        <li>Baseline linear regression</li>
+        <li>Polynomial feature expansion (degree = 2)</li>
+        <li>Ridge regularization (to retain all predictors while controlling overfitting)</li>
+        <li>Out-of-sample evaluation using test RMSE and <code>R²</code></li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>Results</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Test RMSE</th>
+            <th>Test R²</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Baseline (few predictors)</td>
+            <td>~4.612</td>
+            <td>~0.067</td>
+          </tr>
+          <tr>
+            <td><strong>Final Ridge + Polynomial (deg = 2)</strong></td>
+            <td><strong>3.945</strong></td>
+            <td><strong>0.317</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Key Improvements</h3>
+      <ul>
+        <li>Significant reduction in prediction error (RMSE ↓)</li>
+        <li>~5x increase in explanatory power</li>
+        <li>Nonlinear terms improved performance, but higher-order (degree 3) provided negligible gains</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>Key Insights</h2>
+      <ul>
+        <li><strong>Free throw rate and 3-point attempt rate</strong> are the strongest drivers of efficiency</li>
+        <li><strong>Steal rate</strong> shows a negative relationship, likely reflecting role/player archetypes</li>
+        <li>Some nonlinear effects exist, but diminishing returns appear quickly</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>Interpretation</h2>
+      <p>Even with nonlinear modeling and regularization:</p>
+      <ul>
+        <li>The model explains only <strong>~31.7% of variance</strong></li>
+        <li>Indicates that efficiency is influenced by:
+          <ul>
+            <li>Shot quality</li>
+            <li>Defensive pressure</li>
+            <li>Team context</li>
+            <li>Unobserved variables not captured in box-score stats</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>Why Ridge (Not Lasso)?</h2>
+      <p>Ridge was chosen intentionally:</p>
+      <ul>
+        <li>Preserves all predictors</li>
+        <li>Allows analysis of full feature effects</li>
+        <li>Avoids dropping variables that were carefully selected for interpretability</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>Limitations</h2>
+      <ul>
+        <li>Relies only on box-score / aggregated features</li>
+        <li>No spatial shot data or tracking data</li>
+        <li>Limited ability to capture context (defense, play type, etc.)</li>
+        <li>Moderate predictive power suggests missing structure in the data</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>Future Work</h2>
+      <ul>
+        <li>Incorporate shot location / tracking data (albeit hard to find)</li>
+        <li>Explore tree-based models (Random Forest, XGBoost)</li>
+        <li>Add interaction-heavy feature engineering</li>
+        <li>Evaluate time-series stability across seasons</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>Tech Stack</h2>
+      <ul>
+        <li>Python (<code>pandas</code>, <code>numpy</code>)</li>
+        <li><code>scikit-learn</code></li>
+        <li><code>statsmodels</code></li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>
