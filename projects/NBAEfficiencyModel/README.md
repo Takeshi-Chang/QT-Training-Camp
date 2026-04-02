@@ -1,6 +1,5 @@
 # NBA Efficiency Modeling: Predicting True Shooting Percentage
-
-NOTE: This is simply an overview of the project. See report/nba_efficiency_report.html for more detail. 
+NOTE: This is simply an overview of the project. See index.html for the full report, and code.html for all the tools utilized and implementation of the code.
 
 ## Overview
 This project builds a predictive model for NBA player efficiency (True Shooting Percentage) using shot profile, usage, and other metrics encapsulating on-court tendencies.
@@ -91,7 +90,6 @@ Ridge was chosen intentionally:
 ---
 
 ## Tech Stack
-See notebooks/nba_efficiency_code.html for all the tools utilized & more detail.
 
 - Python (pandas, numpy)
 - scikit-learn 
